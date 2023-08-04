@@ -1,6 +1,6 @@
 # AWS EKS
 
-Elastic Kubernetes Service is a Managed AWS Kubernetes offering. Where AWS manages the Comtrol Plane and allows users to manage the Data Plane.
+Elastic Kubernetes Service is a Managed AWS Kubernetes offering. Where AWS manages the Control Plane and allows users to manage the Data Plane.
 
 ### Advantages:
 ```
@@ -55,3 +55,6 @@ Lack of Automation: Self-managed Kubernetes requires more manual intervention an
 
 ---
 # Creating AWS EKS Cluster with Data Plane on AWS Fargate and Deploying 2048 Game using a Ubuntu machine
+
+`Fargate - Its an AWS Serverless similar to AWS Lambda( but lambda is for small workloads)`
+ 

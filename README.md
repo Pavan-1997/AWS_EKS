@@ -26,3 +26,7 @@ Cost: EKS is a managed service, and this convenience comes at a cost. Running an
 Less Control: While EKS provides a great deal of automation, it also means that you have less control over the underlying infrastructure and some Kubernetes configurations.
 ```
 
+---
+# Self-Managed Kubernetes on EC2 Instances:
+
+

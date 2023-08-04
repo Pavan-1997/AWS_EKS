@@ -237,6 +237,9 @@ Below image shows no address since there is no Ingress Controller configured as 
 
 	 iv) Install (Give your cluster name, region and VPC ID which can be found in the below image)
 
+![image](https://github.com/Pavan-1997/AWS_EKS/assets/32020205/abb6a2d9-1007-411c-be42-dbaf603f3903)
+
+
 			helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system \
   				--set clusterName=demo-cluster-1 \
  				--set serviceAccount.create=false \
@@ -249,7 +252,7 @@ Below image shows no address since there is no Ingress Controller configured as 
 			kubectl get deployment -n kube-system aws-load-balancer-controller
 
 
-12. Now check the Pods for ALB Controller running
+13. Now check the Pods for ALB Controller running
 ```
 kubectl get deploy -n kube-system
 ```

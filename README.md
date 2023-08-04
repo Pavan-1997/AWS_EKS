@@ -100,7 +100,7 @@ sudo reboot
 
 
 3. Install AWS CLI
-
+```
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 
 sudo apt install unzip
@@ -110,13 +110,13 @@ unzip awscliv2.zip
 sudo ./aws/install
 
 aws --version
-
+```
 
 4. Configure AWS CLI
-
+```
 aws configure
-
-(Just give Access Key and Secret Key followed by ENTER-ENTER)
+```
+`Just give Access Key and Secret Key followed by ENTER-ENTER`
 
 
 5. Install Kubectl

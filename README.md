@@ -251,15 +251,27 @@ Below image shows no address since there is no Ingress Controller configured as 
 
 			kubectl get deployment -n kube-system aws-load-balancer-controller
 
-![image](https://github.com/Pavan-1997/AWS_EKS/assets/32020205/ab42f107-b83c-4b96-8a82-229e2e9705a8)
+	![image](https://github.com/Pavan-1997/AWS_EKS/assets/32020205/ab42f107-b83c-4b96-8a82-229e2e9705a8)
 
 
 13. Now check the Pods for ALB Controller running
 ```
 kubectl get deploy -n kube-system
 ```
- 
+![image](https://github.com/Pavan-1997/AWS_EKS/assets/32020205/46569ca5-e273-45bc-a48d-54eb9231afa2)
+
+
 13. Checking the Ingress resource which now shows address
 ```
 kubectl get ingress -n game-2048
 ```
+![image](https://github.com/Pavan-1997/AWS_EKS/assets/32020205/fc479486-17fc-4505-b518-82c6f6d01335)
+
+Below shows the Load Balancer created
+
+![image](https://github.com/Pavan-1997/AWS_EKS/assets/32020205/203cb847-f6fe-4bb4-83b1-e736b51ae5c2)
+
+Now Finally accessing the application on Load Balancer
+
+![image](https://github.com/Pavan-1997/AWS_EKS/assets/32020205/139518b6-cc84-45c4-9f36-ef058f063847)
+

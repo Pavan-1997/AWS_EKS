@@ -58,11 +58,23 @@ Lack of Automation: Self-managed Kubernetes requires more manual intervention an
 
 `Fargate - Its an AWS Serverless similar to AWS Lambda( but lambda is for small workloads)`
  
-1. Create a UBUNTU EC2 Instance
+1. Now goto EC2 from AWS Console -> Click on Launch instance
+
+	Give a name
+	
+	Use Ubuntu as an image
+	
+	Instance type as t2.micro
+	
+	Create a key pair if already present use existing one
+	
+	Click on Launch instance
+	
+	Connect to the instance
 
 
 2. Install Docker
-
+```
 sudo apt update -y
 
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
@@ -78,6 +90,12 @@ sudo apt install docker-ce
 sudo usermod -aG docker $USER
 
 sudo systemctl status docker 
+```
+```
+sudo reboot
+```
+`Reboot the instance for Ubuntu user to execute docker commands`
+
 
 
 

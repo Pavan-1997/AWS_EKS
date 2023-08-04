@@ -120,7 +120,7 @@ aws configure
 
 
 5. Install Kubectl
-
+```
 curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.23.6/bin/linux/amd64/kubectl
 
 chmod +x ./kubectl
@@ -128,26 +128,26 @@ chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 
 kubectl version
-
+```
 
 6. Install Eksctl
-
+```
 curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp 
 
 sudo mv /tmp/eksctl /usr/local/bin
 
 eksctl version
-
+```
 
 7. Create a EKS Cluster on AWS Fargate
-
+```
 eksctl create cluster --name demo-cluster-1 --region us-east-2 --fargate
-
+```
 
 8. Now download the Kubeconfig file and saves the configuration to the path (/home/ubuntu/.kube/config)
-
+```
 aws eks update-kubeconfig --name demo-cluster-1 --region us-east-2
-
+```
 
 9. Now creating a Fargate profile for attaching the namespace 2048
 

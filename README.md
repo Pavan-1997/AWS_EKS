@@ -237,7 +237,7 @@ Below image shows no address since there is no Ingress Controller configured as 
 
 	 iv) Install (Give your cluster name, region and VPC ID which can be found in the below image)
 
-![image](https://github.com/Pavan-1997/AWS_EKS/assets/32020205/abb6a2d9-1007-411c-be42-dbaf603f3903)
+	![image](https://github.com/Pavan-1997/AWS_EKS/assets/32020205/abb6a2d9-1007-411c-be42-dbaf603f3903)
 
 
 			helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system \
@@ -247,7 +247,7 @@ Below image shows no address since there is no Ingress Controller configured as 
   				--set region=us-east-2 \
   				--set vpcId=vpc-098cfa51f260d77f8
 
-	 v) Verify
+	  v) Verify
 
 			kubectl get deployment -n kube-system aws-load-balancer-controller
 

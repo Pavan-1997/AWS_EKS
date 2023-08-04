@@ -143,6 +143,8 @@ eksctl version
 ```
 eksctl create cluster --name demo-cluster-1 --region us-east-2 --fargate
 ```
+![image](https://github.com/Pavan-1997/AWS_EKS/assets/32020205/550a0159-5015-4a07-a479-a402cccf76c7)
+
 
 8. Now download the Kubeconfig file and saves the configuration to the path (/home/ubuntu/.kube/config) (Give your cluster name and region)
 ```
@@ -157,6 +159,8 @@ eksctl create fargateprofile \
     --name alb-sample-app \
     --namespace game-2048
 ```
+![image](https://github.com/Pavan-1997/AWS_EKS/assets/32020205/6f1d1fb7-d2e0-44a6-a702-2a96f868c816)
+
 
 10. Now Deploy the Namespace, Deployment, Service and Ingress
 ```

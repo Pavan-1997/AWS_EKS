@@ -139,29 +139,29 @@ sudo mv /tmp/eksctl /usr/local/bin
 eksctl version
 ```
 
-7. Create a EKS Cluster on AWS Fargate
+7. Create a EKS Cluster on AWS Fargate (Give your cluster name and region)
 ```
 eksctl create cluster --name demo-cluster-1 --region us-east-2 --fargate
 ```
 
-8. Now download the Kubeconfig file and saves the configuration to the path (/home/ubuntu/.kube/config)
+8. Now download the Kubeconfig file and saves the configuration to the path (/home/ubuntu/.kube/config) (Give your cluster name and region)
 ```
 aws eks update-kubeconfig --name demo-cluster-1 --region us-east-2
 ```
 
-9. Now creating a Fargate profile for attaching the namespace 2048
-
+9. Now creating a Fargate profile for attaching the namespace 2048 (Give your cluster name and region)
+```
 eksctl create fargateprofile \
     --cluster demo-cluster-1 \
     --region us-east-2 \
     --name alb-sample-app \
     --namespace game-2048
-
+```
 
 10. Now Deploy the Namespace, Deployment, Service and Ingress
-
+```
 kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.5.4/docs/examples/2048/2048_full.yaml
-
+```
 
 11. Deploying an Ingress Controller
 

@@ -165,7 +165,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-load-bala
 
 11. Deploying an Ingress Controller
 
-	a) Configuring IAM OIDC provider for ALB controller (is a K8s pod) to access the AWS Application LB
+	a) Configuring IAM OIDC provider for ALB controller (is a K8s pod) to access the AWS Application LB (Give your cluster name and region)
 		
 		export cluster_name=demo-cluster-1
 
@@ -175,17 +175,17 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-load-bala
 
 	b) Now Setting up ALP Addon
 
-		i) Download the IAM Policy
+	   i) Download the IAM Policy
 
 			curl -O https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.5.4/docs/install/iam_policy.json
 
-		ii) Create IAM Policy
+	   ii) Create IAM Policy
 
 			aws iam create-policy \
   			  --policy-name AWSLoadBalancerControllerIAMPolicy \
     			  --policy-document file://iam_policy.json
 		
-		iii) Create IAM Role (Make sure you give the cluster name and AWS Account ID)
+    iii) Create IAM Role (Make sure you give the cluster name and AWS Account ID) (Give your cluster name, region and AWS Account ID)
 
 			eksctl create iamserviceaccount \
  			 --cluster=demo-cluster-1 \
@@ -200,7 +200,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-load-bala
 	c) Deploy the ALB Controller using Helm
 
 
-		i) Install Helm
+	 i) Install Helm
 
 			curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
 
@@ -211,17 +211,17 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-load-bala
 			helm version
 
 
-		ii) Add Helm Repo
+	 ii) Add Helm Repo
 
 			helm repo add eks https://aws.github.io/eks-charts
 
-		iii) Update the Helm Repo
+	 iii) Update the Helm Repo
 		
 			helm repo update eks
 
 
 
-		iv) Install (Give your cluster name, region and VPC ID which can be found in the below image)
+	 iv) Install (Give your cluster name, region and VPC ID which can be found in the below image)
 
 			helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system \
   				--set clusterName=demo-cluster-1 \
@@ -230,17 +230,17 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-load-bala
   				--set region=us-east-2 \
   				--set vpcId=vpc-098cfa51f260d77f8
 
-		v) Verify
+	 v) Verify
 
 			kubectl get deployment -n kube-system aws-load-balancer-controller
 
 
 12. Now check the Pods for ALB Controller running
-
+```
 kubectl get deploy -n kube-system
-
-
+```
+ 
 13. Checking the Ingress resource which now shows address
-
+```
 kubectl get ingress -n game-2048
-
+```

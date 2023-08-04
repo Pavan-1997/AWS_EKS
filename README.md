@@ -53,4 +53,5 @@ Security and Compliance: Self-managed clusters may require additional effort to 
 Lack of Automation: Self-managed Kubernetes requires more manual intervention and scripting for certain operations, which can increase the risk of human error.
 ```
 
-
+---
+# Creating AWS EKS Cluster with Data Plane on AWS Fargate and Deploying 2048 Game using a Ubuntu machine

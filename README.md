@@ -18,3 +18,11 @@ Monitoring and Logging: EKS integrates with AWS CloudWatch for monitoring cluste
 
 Ecosystem and Community: Being a managed service, EKS benefits from continuous improvement, support, and contributions from the broader Kubernetes community.
 ```
+
+### Disadvantages:
+```
+Cost: EKS is a managed service, and this convenience comes at a cost. Running an EKS cluster may be more expensive compared to self-managed Kubernetes, especially for large-scale deployments.
+
+Less Control: While EKS provides a great deal of automation, it also means that you have less control over the underlying infrastructure and some Kubernetes configurations.
+```
+

@@ -166,6 +166,16 @@ eksctl create fargateprofile \
 ```
 kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.5.4/docs/examples/2048/2048_full.yaml
 ```
+![image](https://github.com/Pavan-1997/AWS_EKS/assets/32020205/add9a294-7a0b-423d-8d35-1794a0d922f4)
+
+Below image shows that the service has no external IP 
+
+![image](https://github.com/Pavan-1997/AWS_EKS/assets/32020205/dc6ae5ab-f764-484f-8f3a-c54de2f7d16a)
+
+Below image shows no address since there is no Ingress Controller configured as of now eventually no Load Balancer
+
+![image](https://github.com/Pavan-1997/AWS_EKS/assets/32020205/3c4238db-c24d-4a3c-86ce-a41b94d3a0d8)
+
 
 11. Deploying an Ingress Controller
 

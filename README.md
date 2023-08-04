@@ -251,6 +251,8 @@ Below image shows no address since there is no Ingress Controller configured as 
 
 			kubectl get deployment -n kube-system aws-load-balancer-controller
 
+![image](https://github.com/Pavan-1997/AWS_EKS/assets/32020205/ab42f107-b83c-4b96-8a82-229e2e9705a8)
+
 
 13. Now check the Pods for ALB Controller running
 ```

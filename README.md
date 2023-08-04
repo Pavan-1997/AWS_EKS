@@ -27,6 +27,6 @@ Less Control: While EKS provides a great deal of automation, it also means that 
 ```
 
 ---
-# Self-Managed Kubernetes on EC2 Instances:
+### Self-Managed Kubernetes on EC2 Instances:
 
 
